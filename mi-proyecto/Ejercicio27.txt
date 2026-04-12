@@ -1,0 +1,47 @@
+//Si la cola tiene lugar, se coloca el elemento en la posición que apunta a fin, luego el puntero avanzará a la siguiente posición circularmente. Se retorna verdadero si se cumplió.
+
+// Pre: Cola no llena (cantidad<MAX), fin apunta a la primera posición libre
+
+//Post: El elemento fue añadido al final de la cola, el puntero fin avanzó de forma circular, el orden de los elementos anteriores no se modificó. Cantidad se incrementó en 1
+
+FUNCION PoneEnCola (unElemento)
+SI cantidad = MAX ENTONCES                 //La cola esta llena
+
+retornar falso
+
+FIN SI
+
+datos[fin] ← unElemento
+
+fin=(fin+1)MOD MAX
+
+cantidad ←  cantidad + 1
+
+retornar verdadero
+
+FIN
+
+
+//Si la cola no está vacía, se guarda el valor de la posición frente. Luego se libera esa celda y el puntero avanza a la siguiente posición circularmente. Se retorna el valor eliminado que guardamos al inicio
+
+//Pre: Cola no vacía (cantidad>0)
+
+//Post: El orden de los elementos no se modificó, frente avanzó de forma circular, el elemento se quitó y se devuelve. Cantidad decremento 1
+
+FUNCION QuitaDeCola()
+
+SI cantidad = 0 ENTONCES
+
+retornar ERROR                           //Se podría lanzar una excepción también
+
+FIN SI
+
+unElemento← datos[frente]
+
+datos[frente] ← null               //Libero la casilla
+
+frente ← (frente+1) MOD MAX
+
+cantidad  ← cantidad - 1
+
+retornar unElemento
