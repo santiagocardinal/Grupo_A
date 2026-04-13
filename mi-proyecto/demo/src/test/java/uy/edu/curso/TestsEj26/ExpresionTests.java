@@ -11,64 +11,55 @@ import uy.edu.curso.Ej26.Expresion;
 
 
 public class ExpresionTests {
-private Expresion exp;
+    private Expresion exp;
     private List<Character> lista;
     private boolean result;
 @Before
-    public void SetUp()
-    {
+    public void SetUp() {
         exp=new Expresion();
     }
 @Test
-    public void CreaInstancia()
-    {
+    public void CreaInstancia() {
         assertNotEquals(exp, null);
     }
 @Test
-    public void TestTrueBasico()
-    {
+    public void TestTrueBasico() {
         lista=List.of('{','}');
         result=exp.controlCorchetes(lista);
         assertTrue(result);
     }
 @Test
-    public void TestFalseBasico()
-    {
+    public void TestFalseBasico() {
         lista=List.of('{');
         boolean result=exp.controlCorchetes(lista);
         assertFalse(result);
     }
 @Test
-    public void TestCasoLimite()
-    {
+    public void TestCasoLimite() {
         lista=List.of();
         boolean result=exp.controlCorchetes(lista);
         assertTrue(result);
     }
 @Test
-    public void TestsBasicos()
-    {
+    public void TestsBasicos() {
         lista=List.of('{','{','{','{');
         boolean result=exp.controlCorchetes(lista);
         assertFalse(result);
     }
 @Test
-    public void TestsBasicos2()
-    {
+    public void TestsBasicos2() {
         lista=List.of('{','{','{','{','}','}','}','}');
         boolean result=exp.controlCorchetes(lista);
         assertTrue(result);
     }
 @Test
-    public void CasoDeEjemploLetra()
-    {
+    public void CasoDeEjemploLetra() {
         lista=List.of('{','}','{','{','}','}');
         boolean result=exp.controlCorchetes(lista);
         assertTrue(result);
     }
 @Test
-    public void CasoDeEjemploLetra2()
-    {
+    public void CasoDeEjemploLetra2() {
         lista=List.of('{','{','}','{','{','}');
         boolean result=exp.controlCorchetes(lista);
         assertFalse(result);
