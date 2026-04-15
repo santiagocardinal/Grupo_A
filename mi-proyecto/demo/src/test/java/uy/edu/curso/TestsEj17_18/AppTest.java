@@ -1,4 +1,4 @@
-package com.example;
+package uy.edu.curso.TestsEj17_18;
 
 import static org.junit.Assert.assertTrue;
 
