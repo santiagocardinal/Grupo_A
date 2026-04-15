@@ -21,7 +21,7 @@ comienzo
 		Si pila.tamaño>2 y pila.tope=='}'  hacer //1
 			pila.sacar //1
 			Si pila.tope=='{' hacer //1
-				Pila.sacar
+				Pila.sacar //1
 			Sino
 				Pila.meter('}') //1 (Nota1)
 			Fin Si
