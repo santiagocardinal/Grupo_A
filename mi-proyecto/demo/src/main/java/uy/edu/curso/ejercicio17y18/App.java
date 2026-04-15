@@ -3,10 +3,10 @@ package uy.edu.curso.ejercicio17y18;
 public class App {
     public static void main(String[] args) {
         //Se intento dar una ruta al estilo que se pedria pero no funcionaba 
-        biblioteca biblioteca = new biblioteca("Ejercicio17y18\\src\\main\\resources\\Adquisiciones.txt");
+        biblioteca biblioteca = new biblioteca("mi-proyecto/demo/src/main/java/uy/edu/curso/ejercicio17y18/resources/Adquisiciones.txt");
         System.out.println("__________________________________________________________________________");
         // Procesa préstamos y devoluciones
-        biblioteca.mostrarPrestamosYDevoluciones("Ejercicio17y18\\src\\main\\resources\\Prestamos.txt");
+        biblioteca.mostrarPrestamosYDevoluciones("mi-proyecto/demo/src/main/java/uy/edu/curso/ejercicio17y18/resources/Prestamos.txt");
         System.out.println("__________________________________________________________________________");
         // Consultar existencias de un libro puntual
         biblioteca.consultarExistencias("978-950-999-111-2");
