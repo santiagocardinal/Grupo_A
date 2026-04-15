@@ -223,11 +223,8 @@ public class biblioteca
         while (i < libros.tamaño()) 
         {
             libro l = libros.obtener(i);
-            System.out.println("Título : " + l.getTitulo());
-            /*System.out.println("Código : " + l.getCodigoIdentificacion());
-            System.out.println("Precio : $" + l.getPrecio());
-            System.out.println("Stock  : " + l.getCantidadEjemplares());
-            */System.out.println("───────────────────────────────────────");
+            System.out.println("Título : " + l.getTitulo() + "| Stock: " + l.getCantidadEjemplares());
+            System.out.println("───────────────────────────────────────");
             i++;
         }
     }
