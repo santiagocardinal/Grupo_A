@@ -1,4 +1,4 @@
-package com.example;
+package uy.edu.curso.ejercicio17y18;
 
 public class TDANodo<T>
 {

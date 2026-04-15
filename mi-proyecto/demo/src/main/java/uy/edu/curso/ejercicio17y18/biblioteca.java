@@ -1,4 +1,4 @@
-package com.example;
+package uy.edu.curso.ejercicio17y18;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,5 +1,4 @@
-package com.example; 
-import org.junit.Test;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import static org.junit.Assert.*;

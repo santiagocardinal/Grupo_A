@@ -1,9 +1,9 @@
-package com.example;
+package uy.edu.curso.ejercicio17y18;
 
 public class App {
     public static void main(String[] args) {
         //Se intento dar una ruta al estilo que se pedria pero no funcionaba 
-        biblioteca biblioteca = new biblioteca("Ejercicio17y18\\src\\main\\resources\\Adquisiciones.txt");
+        biblioteca biblioteca = new biblioteca("src\\main\\java\\uy\\edu\\curso\\ejercicio17y18\\resources");
         System.out.println("__________________________________________________________________________");
         // Procesa préstamos y devoluciones
         biblioteca.mostrarPrestamosYDevoluciones("Ejercicio17y18\\src\\main\\resources\\Prestamos.txt");

@@ -1,4 +1,4 @@
-package com.example;
+package uy.edu.curso.ejercicio17y18;
 //ACA ESTA EL "COMO" DE LA LISTA, OSEA, LA IMPLEMENTACIÓN DE LOS MÉTODOS DEFINIDOS EN LA INTERFAZ TDALista.
 
 import java.util.Comparator;
