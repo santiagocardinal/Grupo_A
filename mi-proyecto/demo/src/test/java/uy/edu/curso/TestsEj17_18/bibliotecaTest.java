@@ -1,15 +1,18 @@
-
+package uy.edu.curso.TestsEj17_18;
 import java.io.FileWriter;
 import java.io.IOException;
 import static org.junit.Assert.*;
- 
+import org.junit.Test;
+import uy.edu.curso.ejercicio17y18.biblioteca;
+import uy.edu.curso.ejercicio17y18.libro;
+import uy.edu.curso.ejercicio17y18.ListaEnlazada;
 public class bibliotecaTest 
 {
     //creo archivos para probar si fuincionan los métodos de la clase biblioteca
  
-    private static final String ARCHIVO_ADQUISICIONES = "src\\test\\java\\com\\example\\adquisicionesTest.txt";
-    private static final String ARCHIVO_PRESTAMOS     = "src\\test\\java\\com\\example\\prestamosTest.txt";
- 
+    private static final String ARCHIVO_ADQUISICIONES = "src/test/java/uy/edu/curso/TestsEj17_18/adquisicionesTest.txt";
+    private static final String ARCHIVO_PRESTAMOS     = "src/test/java/uy/edu/curso/TestsEj17_18/prestamosTest.txt";
+ //
     // ─────────────────────────────────────────────
     //  SETUP
     // ─────────────────────────────────────────────

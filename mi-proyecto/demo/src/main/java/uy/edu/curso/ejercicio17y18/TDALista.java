@@ -18,7 +18,6 @@ interface TDALista<T>  //DEFINIMOS LA INTERFAZ TDALista, QUE ES UNA INTERFAZ GEN
     
     boolean esVacia(); //MÉTODO PARA VERIFICAR SI LA LISTA ESTÁ VACÍA O NO
         
-    void ordenar(Comparator<T> comp); // ← agregar esto
-
+    void ordenar(Comparator<T> comp); //METODO PARA ORDEDNAR LA LISTA SEGUN UN PARAMETRO
 }
 

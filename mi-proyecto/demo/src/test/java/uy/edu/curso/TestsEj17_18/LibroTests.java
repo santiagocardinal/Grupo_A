@@ -1,7 +1,7 @@
-package com.example;
-
+package uy.edu.curso.TestsEj17_18;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import uy.edu.curso.ejercicio17y18.libro;   
 
 public class LibroTests 
 {
