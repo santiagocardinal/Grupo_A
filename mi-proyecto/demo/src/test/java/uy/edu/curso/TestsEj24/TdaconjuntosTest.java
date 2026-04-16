@@ -50,7 +50,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> inter = aed1.interseccion(pf);
 
-       assertEquals("La intersección debería tener 2 alumnos", 2, inter.tamanio());
+       assertEquals("La intersección debería tener 2 alumnos", 2, inter.tamanio());}
 
     @Test
     void testUnionConVacio() {
@@ -86,7 +86,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> resultado = normal.union(normal);
 
-       assertEquals("No debe duplicar elementos", 2, resultado.tamanio());
+       assertEquals("No debe duplicar elementos", 2, resultado.tamanio());}
 
     @Test
     void testInterseccionConsigoMismo() {
