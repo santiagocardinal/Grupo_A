@@ -1,4 +1,4 @@
-package com;
+package uy.edu.curso.Ej24;
 
 public class Tdaconjuntos<T extends Comparable<T>>{
     private TDAlista<T> lista;
