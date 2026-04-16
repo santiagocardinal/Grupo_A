@@ -10,6 +10,7 @@ private Stack<Character> pila; //utilización de la clase Stack de Java
     }
     public boolean controlCorchetes(List<Character> listaDeEntrada) {
         for(int i=0; i<listaDeEntrada.size();i++) {//recorre cada character de la lista.
+            pila.clear();
             if(listaDeEntrada.get(i)=='{') { //agrega a la pila el character correspondiente
                 pila.push('{');
             }
