@@ -1,0 +1,37 @@
+Parte1:
+Se recorre una lista de corchetes, agregando el corchete correspondiente a una pila. Cada vez que se agrega un nuevo corchete se fija si último corchete agregado a la pila es de cierre y si el penúltimo agregado es de apertura, si sí lo son, los elimina de la pila. Si al finalizar el recorrido la pila está vacía, la secuencia de corchetes es correcta.
+Precondiciones:
+-Como entrada debe haber una lista vacía o con caracteres de corchetes (no otros caracteres, ni otros tipos)
+Postcondiciones:
+-Devuelve verdadero si la secuencia está bien y la pila utilizada queda vacía
+-Devuelve falso si la secuencia está mal y la pila utilizada no queda vacía
+
+ControlCorchetes(listaDeEntrada) //lista de entrada de tamaño N
+comienzo
+	Para cada caracter en listaDeEntrada //N (la cantidad de veces que itera es el tamaño de la lista de entrada, N)
+		Si caracter=='{' hacer //1
+			Pila.Meter(caracter) //1 
+		Sino
+			si caracter=='}' hacer //1
+				pila.meter(caracter) //1
+			Fin si
+		Finsi
+		Si pila.tamaño>1 y pila.tope=='}'  hacer //1
+			pila.sacar //1 
+			Si pila.tope=='{' hacer //1
+				Pila.sacar //1 
+			Sino
+				Pila.meter('}') //1 
+			Fin Si
+		Fin si
+	Fin Para
+	Si pila.esVacia hacer //1
+		Devolver verdadero
+	Sino
+		Devolver falso
+	Fin Si
+fin
+
+Parte2: 
+El programa tiene complejidad de O(n): se recorre completamente la lista de entrada O(N), y en cada iteración se ejecutan instrucciones de complejidad O(1), por lo que por la regla del producto, el programa sería O(N).
+Al utilizar una pila se utiliza espacio adicional, que es de O(N) en el caso que se inserten elementos y no se elimine ninguno, por ejemplo si la lista de entrada tiene exclusivamente corchetes de apertura.

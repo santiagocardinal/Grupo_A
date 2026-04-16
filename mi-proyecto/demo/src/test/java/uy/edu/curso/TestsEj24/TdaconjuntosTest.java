@@ -2,8 +2,8 @@ package uy.edu.curso.TestsEj24;
 
 import uy.edu.curso.Ej24.TAlumno;
 import uy.edu.curso.Ej24.Tdaconjuntos;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class TdaconjuntosTest {
 
@@ -32,7 +32,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> union = aed1.union(pf);
 
-        assertEquals(7, union.tamanio(), "La unión debería tener 7 alumnos sin duplicados");
+        assertEquals("La unión debería tener 7 alumnos sin duplicados", 7, union.tamanio());
     }
 
     @Test
@@ -50,8 +50,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> inter = aed1.interseccion(pf);
 
-        assertEquals(2, inter.tamanio(), "La intersección debería tener 2 alumnos");
-    }
+       assertEquals("La intersección debería tener 2 alumnos", 2, inter.tamanio());}
 
     @Test
     void testUnionConVacio() {
@@ -63,7 +62,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> resultado = normal.union(vacio);
 
-        assertEquals(2, resultado.tamanio(), "Unión con vacío debería mantener tamaño");
+        assertEquals("Unión con vacío debería mantener tamaño", 2, resultado.tamanio());
     }
 
     @Test
@@ -75,7 +74,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> resultado = normal.interseccion(vacio);
 
-        assertEquals(0, resultado.tamanio(), "Intersección con vacío debería ser 0");
+       assertEquals("Intersección con vacío debería ser 0", 0, resultado.tamanio());
     }
 
     @Test
@@ -87,8 +86,7 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> resultado = normal.union(normal);
 
-        assertEquals(2, resultado.tamanio(), "No debe duplicar elementos");
-    }
+       assertEquals("No debe duplicar elementos", 2, resultado.tamanio());}
 
     @Test
     void testInterseccionConsigoMismo() {
@@ -99,6 +97,6 @@ public class TdaconjuntosTest {
 
         Tdaconjuntos<TAlumno> resultado = normal.interseccion(normal);
 
-        assertEquals(2, resultado.tamanio(), "Debe ser igual al conjunto original");
+       assertEquals("Debe ser igual al conjunto original", 2, resultado.tamanio());
     }
 }
