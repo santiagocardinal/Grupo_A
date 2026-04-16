@@ -1,4 +1,4 @@
-package com;
+package uy.edu.curso.Ej24;
 
 public class Nodo<T> {
     private T dato;

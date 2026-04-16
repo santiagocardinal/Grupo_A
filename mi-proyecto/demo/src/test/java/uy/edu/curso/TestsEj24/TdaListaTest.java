@@ -1,8 +1,8 @@
-package com.example;
+package uy.edu.curso.TestsEj24;
 import org.junit.jupiter.api.*;
 
-import com.TAlumno;
-import com.TDAlista;
+import uy.edu.curso.Ej24.TAlumno;
+import uy.edu.curso.Ej24.TDAlista;
 
 import static org.junit.jupiter.api.Assertions.*;
 

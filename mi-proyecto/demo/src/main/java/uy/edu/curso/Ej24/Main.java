@@ -1,4 +1,4 @@
-package com;
+package uy.edu.curso.Ej24;
 public class Main {
     public static void main(String[] args){
         //Creacion de alumnos
