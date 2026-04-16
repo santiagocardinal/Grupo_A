@@ -1,0 +1,49 @@
+Si la cola tiene lugar disponible, se coloca el nuevo elemento en la posición que apunta a fin, luego el puntero avanzará a la siguiente posición circularmente usando mod. Se retorna verdadero si se cumplió, si la cola está llena se retorna falso.
+
+Precondiciones: Cola no llena, debe tener al menos un espacio disponible. La cantidad de elementos en la cola debe ser menor a la cantidad de elementos maximos(cantidad<MAX). El puntero fin apunta a la primera posición libre para un nuevo elemento.
+
+Postcondiciones: El elemento fue añadido al final de la cola. El puntero fin avanzó de forma circular, y el orden de los elementos que ya estaban en la cola no se modificó. Cantidad de elementos se incrementó en 1.
+
+FUNCION PoneEnCola (unElemento)
+SI cantidad = MAX ENTONCES                 //La cola esta llena
+
+retornar falso
+
+FIN SI
+
+datos[fin] ← unElemento        //Se inserta elemento en la posición fin
+
+fin=(fin+1)MOD MAX      
+
+cantidad ←  cantidad + 1
+
+retornar verdadero
+
+FIN
+
+
+Si la cola no está vacía, se guarda el valor de la posición frente. Luego se libera esa celda y el puntero avanza a la siguiente posición circularmente usando mod. Se retorna el valor eliminado que guardamos al inicio y se resta 1 a la cantidad de elementos en la cola. Si la cola esta vacía se retorna un error.
+
+Precondiciones: Cola no vacía (cantidad>0), frente apunta al elemento a eliminar.
+
+Postcondiciones: El orden de los elementos no se modificó, frente avanzó de forma circular, el elemento se elimino y se devuelve. Cantidad de elementos decremento 1.
+
+FUNCION QuitaDeCola()
+
+SI cantidad = 0 ENTONCES
+
+retornar ERROR                           //Se podría lanzar una excepción también
+
+FIN SI
+
+unElemento← datos[frente]
+
+datos[frente] ← null               //Libero la casilla
+
+frente ← (frente+1) MOD MAX
+
+cantidad  ← cantidad - 1
+
+retornar unElemento
+
+Las funciones retornan booleano y un elemento respectivamente porque en la interfaz TDACola está definido como boolean ponerEnCola(T var1). quitaDeCola retorna T, el elemento que sacó
